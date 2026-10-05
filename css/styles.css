@@ -178,8 +178,8 @@ clip-path:polygon(0 8%,25% 3%,55% 7%,80% 0,100% 5%,100% 94%,70% 100%,40% 95%,12%
 /* tablet */
 @media(max-width:1000px){
 .nav,.header__cta{display:none}.menu-btn{display:block}
-.servicos{flex-direction:column;align-items:flex-start}.servicos__lista{overflow-x:auto;width:100%;scroll-snap-type:x mandatory;padding-bottom:.6rem}
-.servicos__lista li{flex:0 0 40%;scroll-snap-align:start}
+.servicos{flex-direction:column;align-items:flex-start}.servicos__lista{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem;width:100%}
+.servicos__lista li{flex:none}
 .site-footer{padding-top:6rem}.site-footer__inner{max-width:780px}.site-footer__grid{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);row-gap:2rem;min-height:0}
 .footer-brand{padding:1rem 2rem 1rem 0}.footer-links{padding-left:2rem}.footer-services{padding-left:0;border-left:0}.footer-newsletter{padding-left:2rem}
 .site-footer__animals{position:relative;inset:auto;z-index:0;right:auto;top:auto;bottom:auto;width:calc(100% + 3rem);height:clamp(280px,48vw,420px);margin:.5rem -1.5rem 0;opacity:.92;mask-image:linear-gradient(180deg,transparent 0%,#000 15%,#000 88%,transparent 100%);-webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 15%,#000 88%,transparent 100%)}
@@ -196,7 +196,7 @@ clip-path:polygon(2% 2%,25% 0,55% 2%,80% 0,100% 2%,99% 50%,100% 98%,70% 100%,40%
 .hero__imagem{object-position:66% top;height:72%}.hero__veu{background:linear-gradient(0deg,var(--verde) 34%,rgba(16,38,31,.4) 62%,transparent 80%)}
 .hero__texto{padding:0 1.2rem 6.5rem;position:relative;z-index:2;text-shadow:0 2px 14px rgba(0,0,0,.6)}
 .hero h1{font-size:2.9rem}.nota--hero,.rolar{display:none}
-.servicos__lista li{flex-basis:44%}
+.servicos__lista li{flex-basis:auto}
 .final__pincelada{flex-direction:column;align-items:flex-start;padding-bottom:16rem}.animal--horizonte{width:80vw;right:-6%}
 .palavras{grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem .5rem}.w{font-size:clamp(2.7rem,11vw,3.6rem)}
 .site-footer{margin-top:0;padding-top:4.8rem}.site-footer__inner{padding:0 1.3rem 1rem}
@@ -215,3 +215,52 @@ clip-path:polygon(2% 2%,25% 0,55% 2%,80% 0,100% 2%,99% 50%,100% 98%,70% 100%,40%
 .btn{min-height:48px}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.w{opacity:1;transform:none;filter:none}}
+
+.site-footer{padding:0;background:var(--verde)}
+.site-footer::before,.site-footer__inner,.site-footer__folhagem{display:none}
+.footer-bottom{display:none}
+.site-footer__banner{position:relative;display:block;width:100%;line-height:0}
+.site-footer__banner img{display:block;width:100%;height:auto}
+.footer-hotspots{position:absolute;inset:0;z-index:2}
+.footer-hotspot{position:absolute;display:block;outline:0}
+.footer-hotspot:focus-visible{outline:2px solid #e5bd69;outline-offset:3px}
+.footer-hotspot--brand{left:5%;top:30%;width:19%;height:11%}
+.footer-hotspot--address{left:5%;top:45%;width:22%;height:6%}
+.footer-hotspot--phone{left:5%;top:52%;width:18%;height:5%}
+.footer-hotspot--email{left:5%;top:57%;width:22%;height:5%}
+.footer-hotspot--instagram{left:5%;top:63%;width:3%;height:5%}
+.footer-hotspot--facebook{left:9%;top:63%;width:3%;height:5%}
+.footer-hotspot--whatsapp{left:13%;top:63%;width:3%;height:5%}
+.footer-hotspot--home{left:29%;top:42%;width:8%;height:4%}
+.footer-hotspot--about{left:29%;top:46%;width:8%;height:4%}
+.footer-hotspot--services-link{left:29%;top:50%;width:10%;height:4%}
+.footer-hotspot--team{left:29%;top:54%;width:8%;height:4%}
+.footer-hotspot--contact{left:29%;top:58%;width:9%;height:4%}
+.footer-hotspot--consultas{left:41%;top:42%;width:14%;height:4%}
+.footer-hotspot--vacinacao{left:41%;top:46%;width:10%;height:4%}
+.footer-hotspot--exames{left:41%;top:50%;width:16%;height:4%}
+.footer-hotspot--cirurgias{left:41%;top:54%;width:10%;height:4%}
+.footer-hotspot--internacao{left:41%;top:58%;width:10%;height:4%}
+.footer-hotspot--banho{left:41%;top:62%;width:10%;height:4%}
+.footer-hotspot--newsletter{left:55%;top:38%;width:17%;height:25%}
+@media(max-width:900px){
+.footer-hotspot--brand{left:8%;top:6%;width:43%;height:9%}
+.footer-hotspot--address{left:8%;top:14%;width:40%;height:6%}
+.footer-hotspot--phone{left:8%;top:20%;width:28%;height:5%}
+.footer-hotspot--email{left:8%;top:25%;width:39%;height:5%}
+.footer-hotspot--instagram{left:8%;top:29%;width:6%;height:4%}
+.footer-hotspot--facebook{left:16%;top:29%;width:6%;height:4%}
+.footer-hotspot--whatsapp{left:24%;top:29%;width:6%;height:4%}
+.footer-hotspot--home{left:8%;top:34%;width:20%;height:3%}
+.footer-hotspot--about{left:8%;top:37%;width:20%;height:3%}
+.footer-hotspot--services-link{left:8%;top:40%;width:22%;height:3%}
+.footer-hotspot--team{left:8%;top:43%;width:20%;height:3%}
+.footer-hotspot--contact{left:8%;top:46%;width:20%;height:3%}
+.footer-hotspot--consultas{left:8%;top:52%;width:38%;height:3%}
+.footer-hotspot--vacinacao{left:8%;top:56%;width:25%;height:3%}
+.footer-hotspot--exames{left:8%;top:60%;width:40%;height:3%}
+.footer-hotspot--cirurgias{left:8%;top:64%;width:25%;height:3%}
+.footer-hotspot--internacao{left:8%;top:68%;width:25%;height:3%}
+.footer-hotspot--banho{left:8%;top:72%;width:25%;height:3%}
+.footer-hotspot--newsletter{left:8%;top:77%;width:38%;height:8%}
+}
